@@ -1,23 +1,23 @@
-const express = require("express");
-const app = express();
-const cors = require("cors");
-const bodyParser = require("body-parser");
+const express = require("express")
+const app = express()
+const cors = require("cors")
+const bodyParser = require("body-parser")
 const stripe = require("stripe")(
-  "sk_test_51GsyYaGkWeBsIHsJMtLowBGTKNQ1aOMP327AIyPgYKsVdeblwJ7kUHEE61cvzbmkKoKoef1xfEpQxSh5I67UKWPY008gDNVsJ5"
-);
+  "sk_test_51Gs0xOBhiUsS8BKc334rdVFOAFEKAycK5FksHmNIzigGyfsXVWtMWJYbng1eouoNEVj1Y7qinKVncvCYXs20mBPn00q152Znwm"
+)
 
-const port = 3000;
+const port = 3000
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
-app.use(bodyParser.json());
+app.use(bodyParser.json())
 
-app.use(cors());
+app.use(cors())
 
 app.post("/pay", async (req, res) => {
-  const { email } = req.body;
+  const { email } = req.body
 
   const paymentIntent = await stripe.paymentIntents.create({
     amount: 5000,
@@ -25,13 +25,13 @@ app.post("/pay", async (req, res) => {
     // Verify your integration in this guide by including this parameter
     metadata: { integration_check: "accept_a_payment" },
     receipt_email: email,
-  });
+  })
 
-  res.json({ client_secret: paymentIntent["client_secret"] });
-});
+  res.json({ client_secret: paymentIntent["client_secret"] })
+})
 
 app.post("/sub", async (req, res) => {
-  const { email, payment_method } = req.body;
+  const { email, payment_method } = req.body
 
   const customer = await stripe.customers.create({
     payment_method: payment_method,
@@ -39,19 +39,19 @@ app.post("/sub", async (req, res) => {
     invoice_settings: {
       default_payment_method: payment_method,
     },
-  });
+  })
 
   const subscription = await stripe.subscriptions.create({
     customer: customer.id,
-    items: [{ plan: "price_1GtyHsGkWeBsIHsJT05ptODU" }],
+    items: [{ plan: "price_1H2uvBBhiUsS8BKcuyVousB4" }],
     expand: ["latest_invoice.payment_intent"],
-  });
+  })
 
-  const status = subscription["latest_invoice"]["payment_intent"]["status"];
+  const status = subscription["latest_invoice"]["payment_intent"]["status"]
   const client_secret =
-    subscription["latest_invoice"]["payment_intent"]["client_secret"];
+    subscription["latest_invoice"]["payment_intent"]["client_secret"]
 
-  res.json({ client_secret: client_secret, status: status });
-});
+  res.json({ client_secret: client_secret, status: status })
+})
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
