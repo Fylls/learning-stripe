@@ -3,7 +3,7 @@
 <br>
 
 Here are some notes from a youtube videos I watched.
-<br>
+
 https://www.youtube.com/watch?v=JkSgXgqRH6k
 <br>
 https://www.youtube.com/watch?v=CqXjp1vtNwk
