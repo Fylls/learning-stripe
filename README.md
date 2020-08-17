@@ -2,7 +2,7 @@
 
 <br>
 
-Here are some notes from a youtube videos I watched.
+Here are some notes from a youtube videos I watched:
 
 https://www.youtube.com/watch?v=JkSgXgqRH6k
 <br>
