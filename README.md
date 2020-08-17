@@ -1,10 +1,8 @@
 
 
 # Workout: StripeJS
-
 <br>
-
-HJere are some notes from a youtube videos I watched.
+Here are some notes from a youtube videos I watched.
 <br>
 https://www.youtube.com/watch?v=JkSgXgqRH6k
 https://www.youtube.com/watch?v=CqXjp1vtNwk
