@@ -18,14 +18,15 @@ https://www.youtube.com/watch?v=CqXjp1vtNwk
 
 <br>
 <img src="https://user-images.githubusercontent.com/55017307/90639646-3d6b3d80-e22f-11ea-8f40-2499b78d3326.gif" width="1000"/>
+<br>
 
 <br>
 John wick is a great danger and he needs your help to wipe out the squad's in the Tilted towers.
 But to do this he needs golden scar and a couple of jug jugs.
 To help him all he needs is your credit card number the three digits on the back and the expiration month and year but you got to be quick so that John wick can secure the bag and achieve the epic victory royale
-
 <br>
 
+<br>
 <img src="https://user-images.githubusercontent.com/55017307/90640364-2bd66580-e230-11ea-92fa-817ecad7eb35.gif" width="1000"/>
 <br>
 
