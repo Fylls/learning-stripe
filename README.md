@@ -1,6 +1,6 @@
 <div align="center">
   
-# Workout: StripeJS
+# Learning: StripeJS
 
 <br>
 
